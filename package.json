@@ -2,7 +2,7 @@
   "name": "jsHiteshChoudhary",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "01_basics/01_variables.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
