@@ -5,9 +5,13 @@
 
 // 1.
 const jsUser = {}  // empty object
+// non singleton object
 
 // 2.
 // Object.create
+
+// 3.
+// const name = new Object() // singleton object
 
 //----------------------------------------------------
 const jsUser2 = {
