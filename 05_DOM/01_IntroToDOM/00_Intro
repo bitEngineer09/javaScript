@@ -1,0 +1,22 @@
+// window -> document -> html -> head & body
+// WINDOW => window object is the global object that represents the browser window or tab. 
+        // It provides access to various browser-related functionalities, including the document, history, local storage, timers, and more.
+
+
+// DOCUMENT => The document object in JavaScript represents the webpage (HTML document) that is loaded in the browser. 
+        // It is part of the Window object (window.document) and provides methods to access, manipulate, and modify the content and structure of a webpage.        
+
+console.log(window)  // shows all website info and objects, eske ander hee document object hota hai
+
+console.log(window.document) // access document object
+
+console.log(document) // same
+
+console.dir(document) // more info about document
+// . lagake eske methods access kar sakte hai
+console.log(document.baseURI); // access document's base url
+
+console.log(document.links); 
+console.log(document.links[2]); // access second link
+
+document.getElementById('firstHeading') // id pass karte hai

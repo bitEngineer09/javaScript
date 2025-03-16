@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | CHai aur Code</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}` // abhi tak ye hava me hai, kahi attach nahi hua hai
+
+        // jisme add karna hai use select karo
+        document.querySelector('.language').appendChild(li)
+
+        // ** this is not optimized cuz, it needs to travese the whole tree
+    }
+    addLanguage('python')
+    addLanguage('c++')
+    addLanguage('typescript')
+
+
+//--------Optimal Fn---------------------------
+    function addOptimalLanguage(LangName) {
+        // ** no traversing
+        const li = document.createElement('li')
+
+        li.appendChild(document.createTextNode(LangName))  // ** always use this
+
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimalLanguage("goLang")
+
+
+//---------Edit--------------------------------
+const secondChild = document.querySelector('li:nth-child(2)')
+// secondChild.innerHTML() -> firse sir aapne ye use kar liya, it will traverse the whole tree again.
+
+// method to replace element
+const newLang = document.createElement('li') // ek naya element banao
+newLang.textContent = "mojo" // ab us element ka contnet banao
+// secondChild.replaceWith(newLang) // ab use jodo yaa operation karo
+
+document.body.appendChild(newLang) // it will add the element, not replace
+
+secondChild.style.color = "green"
+secondChild.style.backgroundColor = "#ffffff"
+secondChild.style.fontWeight = "800"
+
+
+//----------Edit----------------------------------
+const firstChild = document.querySelector('li:nth-child(1)')
+
+const replaceLang = document.createElement('li')
+replaceLang.textContent = "JAVA"
+firstChild.replaceWith(replaceLang)
+
+
+//----------outerHTML---------------------------------
+const thirdLang = document.querySelector('li:nth-child(3)')
+thirdLang.outerHTML = '<li>rust</li>'
+
+
+//----------remove-------------------
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+</script>
+</html>

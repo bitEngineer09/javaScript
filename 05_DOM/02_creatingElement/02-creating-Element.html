@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+        color: #ffffff;
+    }
+</style>
+<body>
+    
+</body>
+<script>
+    const divison = document.createElement('div') // ye hume ek element bana diya hai
+    // ab uski attributes, properties and values daal re hai
+    console.log(divison);
+    divison.className = "main"
+    divison.id = Math.round(Math.random() * 10 + 1)
+    divison.setAttribute("title", "generated title")
+    divison.style.backgroundColor = "green"
+    divison.style.padding = "15px"  // abhi tak jitna bhii kaam chala hai vo memory me hua hai
+    
+
+    // divison.innerHTML("Chai aur Code") -> ye do step me kaam karta hai, pehle ye values ka refernce lata hai, fir uspe override karta hai
+
+    // But people prefer => (document.createTextNode)
+    const addText = document.createTextNode("Chai aur Code") // ye ek child create hua hai
+    divison.appendChild(addText) // abhi tak ye hava me hai
+
+    // now attach to document
+    document.body.appendChild(divison)
+
+//     document.createElement(tagName)
+// Creates an HTML element of the specified type.
+// The element can have attributes, children, styles, etc.
+
+
+// document.createTextNode(text)
+// Creates a text node that contains only text.
+// It does not support attributes, styles, or child elements.
+
+
+    // NOTE -> STEPS TO ADD ELEMENTS
+    // 1> pehle 
+
+</script>
+</html>
