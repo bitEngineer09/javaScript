@@ -37,7 +37,7 @@ programming.forEach((item, index, arr) => {
 
 //---------working on array of objects--------------
 
-// ye bht common operation hai, cuz database se jo values aati hai vo array ki formal me aati hai, and har ek value object hoti hai
+// ye bht common operation hai, cuz database se jo values aati hai vo array ki forma me aati hai, and har ek value object hoti hai.
 const myCoding = [
     {
         languageName: "javascript",
