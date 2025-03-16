@@ -4,7 +4,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault(); // esse vo default kaam rok dega, matlab ki submit karne par vo values direct server ko nahi bhej paaega
     // un values ko hold kar lega
 
-    const height = parseInt(document.querySelector('#height').value)
+    const height = parseInt(document.querySelector('#height').value) // .value: gets the current value inside the input field.
     const weight = parseInt(document.querySelector('#weight').value)
     const results = document.querySelector('#results')
 
