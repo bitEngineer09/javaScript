@@ -25,10 +25,11 @@ for (const char of greet) {
 
 
 //----------Maps overview---------------
-// * map itself is an object.
+
 // * holds key value pair
 // * maintains insertion order
 // * duplicates not allowed
+// * Maps are iterable, meaning you can easily loop through maps
 
 const map = new Map()
 map.set("USA", "America")

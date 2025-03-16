@@ -11,7 +11,7 @@ let isLoggedIn = false // boolean
 let ask;                    //undefined
 
 // number -> 2^53
-//bigint
+// bigint
 // string -> ""
 // boolean -> true/ false
 // null -> standalone value
