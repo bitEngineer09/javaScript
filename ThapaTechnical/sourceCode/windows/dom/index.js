@@ -24,6 +24,9 @@
 
 //? Document type node: A document type node, such as <! DOCTYPE html>.
 
+
+
+
 //* ==============================
 //* DOM Properties and Methods
 //* ==============================
@@ -37,6 +40,7 @@
 // innerHTML
 // textContent
 // style
+
 
 //! DOM Methods:
 // createElement(tagName)
@@ -55,6 +59,9 @@
 // closest(selector)
 // forEach (Array.from)
 
+
+
+
 //* ==============================
 //* DOM Navigation
 //* ==============================
@@ -62,34 +69,44 @@
 //? document represents the entire document
 // console.log(document);
 
+
 //? Document.documentElement returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
+
 
 //? parentNode / parentElement:
 // Navigate to the parent node or element.
 
+
 // Document and DocumentFragment nodes can never have a parent, so parentNode will always return null. It also returns null if the node has just been created and is not yet attached to the tree.
+
 
 //? childNodes / children:
 // Navigate to child nodes or elements.
-
-// childNodes is a property that returns a NodeList containing all child nodes of a given element, including text nodes and comment nodes.
+// * childNodes is a property that returns a NodeList containing all child nodes of a given element, including text nodes and comment nodes. (DOM tree ka data)
+// * children return HTMLCollection (html ka data)
 
 //? firstChild / firstElementChild:
 // Navigate to the first child node or element.
+// The Element suffix in firstElementChild and similar properties signifies that only element nodes are considered.
 
-//todo The Element suffix in firstElementChild and similar properties signifies that only element nodes are considered.
 
 //? lastChild / lastElementChild:
 // Navigate to the last child node or element.
 
+
 //? nextSibling / nextElementSibling:
 // Navigate to the next sibling node or element.
+
 
 //? previousSibling / previousElementSibling:
 // Navigate to the previous sibling node or element.
 
+
 //? closest(selector):
 // Find the closest ancestor of the current element that matches a given selector.
+
+
+
 
 //* ==============================
 //* DOM Filtering
@@ -98,13 +115,18 @@
 //? childNodes / children:
 // Get a NodeList or HTMLCollection and filter based on your criteria.
 
+
 //? Filtering Siblings:
 //? nextSibling / nextElementSibling
 //? previousSibling / previousElementSibling
 
+
 //? closest(selector):
 //? Find the closest ancestor that matches a given selector.
 //? The closest(selector) method is used to find the closest ancestor of an element that matches a specified CSS selector. This method traverses up the DOM tree, starting from the current element, and returns the first ancestor that matches the provided selector. If no matching ancestor is found, it returns null.
+
+
+
 
 //* ==============================
 //* DOM Searching
@@ -112,12 +134,19 @@
 //? getElementById(id): Find an element by its ID.
 
 //? getElementsByClassName(className): Find elements with a specific class name.
+//  it return HTML Collection
 
 //? getElementsByTagName(tagName): Find elements with a specific tag name.
+//  it return HTML Collection
 
 //? querySelector(selector): Find the first element that matches the specified CSS selector.
+// it returns HTML Collection {on the spot update ho jata hai}
 
 //? querySelectorAll(selector): Find all elements that match the specified CSS selector.
+// It returns Node List {on the spot update nahi hota hai}
+
+
+
 
 //* ============================================
 //* DOM - CRUD (Create, Read, Update, Delete):
@@ -140,6 +169,9 @@
 //? innerHTML: Read or update the HTML content of an element.
 
 //? textContent: Read or update the text content of an element.
+
+
+
 
 //* =============================
 //* DOM - Iteration

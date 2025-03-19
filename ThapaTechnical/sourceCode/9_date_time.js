@@ -2,7 +2,8 @@
 //* Date & Time in JavaScript
 //* =========================================
 
-//? Date() constructor: The Date() constructor creates Date objects. When called as a function, it returns a string representing the current time.
+//? Date() constructor:-----------
+//  The Date() constructor creates Date objects. When called as a function, it returns a string representing the current time.
 
 //? Creating a Date Object:
 // You can create a new Date object using the new keyword. It can be done in several ways:

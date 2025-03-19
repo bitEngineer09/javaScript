@@ -162,6 +162,7 @@ console.log(fruits);
 //? 2: pop(): Method that removes the last element from an array.
 console.log(fruits.pop());
 console.log(fruits);
+// The pop() method returns the popped value
 
 //? 3: unshift(): Method that adds one or more elements to the beginning of an array.
 console.log(fruits.unshift("guava"));
@@ -180,16 +181,22 @@ console.log(fruits);
 
 //? The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
 
-//* syntax
-//? splice(start, deleteCount, item1, item2, /* …, */ itemN)
-// let fruits = ["apple", "orange", "banana", "mango"];
-// fruits.splice(1, 1, "grapes");
-// console.log(fruits);
 
-// //! what if you want to add the element at the end
-// fruits.splice(-1, 0, "grapes");
-// fruits.splice(1, 0, "grapes");
-// console.log(fruits);
+//* syntax--------
+//? splice(start, deleteCount, item1, item2, /* …, */ itemN)
+
+// start -> index where the changes begin
+// deleteCount → The number of elements to remove (can be 0 if you don’t want to remove anything).
+// item1, item2, ... → (Optional) New elements to add at the start position.
+
+let fruits5 = ["apple", "orange", "banana", "mango"];
+fruits5.splice(1, 1, "grapes");
+console.log(fruits5);
+
+//! what if you want to add the element at the end
+fruits.splice(-1, 0, "grapes");
+fruits.splice(1, 0, "grapes");
+console.log(fruits);
 
 
 
@@ -200,56 +207,57 @@ console.log(fruits);
 //?👉  Searching and Filter in an Array
 
 //? For Search we have - indexOf, lastIndexOf & includes
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+const num = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
 //?1: indexOf Method: The indexOf method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 // syntax
 // indexOf(searchElement);
 // indexOf(searchElement, fromIndex);
-// console.log(numbers.indexOf(4, 5));
+console.log(num.indexOf(4, 5));
 
 //? 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
-// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
-// const result = numbers.indexOf(6);
-// console.log(result);
-// const result1 = numbers.lastIndexOf(6);
-// console.log(result1);
-// const result = numbers.indexOf(6, 5);
-// console.log(result);
+const numbers1 = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+const result1 = numbers1.indexOf(6);
+console.log(result1);
+const result2 = numbers1.lastIndexOf(6);
+console.log(result2);
+const result3 = numbers1.indexOf(6, 5);
+console.log(result3);
 
 //? 3: The includes method checks whether an array includes a certain element, returning true or false.
 // Syntax
 // includes(searchElement);
 // includes(searchElement, fromIndex);
 
-// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
-// const result = numbers.includes(5);
-// console.log(result);
+const numbers2 = [1, 2, 3, 6, 4, 5, 6, 7, 8, 9];
+const result4 = numbers2.includes(5);
+console.log(result4);
 
 //todo Challenge time
 //? 1: Add Dec at the end of an array?
 //? 2: What is the return value of splice method?
+//  ans 2) -> The return value of the splice() method is an array containing the removed elements.
 //? 3: Update march to March (update)?
 //? 4: Delete June from an array?
 
-// const months = ["Jan", "march", "April", "June", "July"];
+const months = ["Jan", "march", "April", "June", "July"];
 
 // // 1
-// months.splice(months.length, 0, "Dec");
-// // console.log(months);
+months.splice(months.length, 0, "Dec");
+// console.log(months);
 
 // // 2:
 // // When used to add elements, the splice method returns an empty array ([]).
 
 // // 3
-// const indexToUpdate = months.indexOf("march");
-// months.splice(indexToUpdate, 1, "March");
-// // console.log(months);
+const indexToUpdate = months.indexOf("march");
+months.splice(indexToUpdate, 1, "March");
+console.log(months);
 
 // // 4
-// const indexToDelete = months.indexOf("June");
-// months.splice(indexToDelete, 1);
-// console.log(months);
+const indexToDelete = months.indexOf("June");
+months.splice(indexToDelete, 1);
+console.log(months);
 
 
 
@@ -258,75 +266,83 @@ console.log(fruits);
 //*  Filter in an Array
 //* =========================================
 //? Search +  Filter
-// const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
+const num1 = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
 
 //? 1: find Method: The find method is used to find the first element in an array that satisfies a provided testing function. It returns the first matching element or undefined if no element is found.
 
-// const result = numbers.find((curElem) => {
-//   return curElem > 6;
-// });
+// this nethod returns that satisfied element
+const result = num1.find((curElem) => {
+  return curElem > 6;
+});
+console.log(result);
 
-// console.log(result);
 
 //? 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const num2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// const result = numbers.map((curElem) => curElem * 5);
-// console.log(result);
-// const result2 = result.findIndex((curElem) => {
-//   return curElem > 15;
-// });
-// console.log(result2);
+const result5 = num2.map((curElem) => curElem * 5);
+console.log(result5);
+
+const res = result5.findIndex((curElem) => {
+  return curElem > 15;
+});
+console.log(res);
+
 
 //* 3:  filter Method: The filter method creates a new array with all elements that pass the test implemented by the provided function.
 // syntax:
 //? filter(callbackFn)
 //? filter(callbackFn, thisArg)
 
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// const result = numbers.filter((curElem) => {
-//   return curElem > 4;
-// });
-
-// console.log(result);
+const numbers6 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const result6 = numbers6.filter((curElem) => {
+  return curElem > 4;
+});
+console.log(result);
 
 // UseCase: In E-commerce website when we want to Remove or delete any product from addToCart page.
 //! Ex. le'ts say user wants to delete value 6.
-// let value = 6;
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+let value = 6;
+const numbers7 = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
-// let updatedCart = numbers.filter((curElem) => {
-//   return curElem !== value;
-// });
+let updatedCart = numbers7.filter((curElem) => {
+  return curElem !== value;
+});
 
-// console.log(updatedCart);
+console.log(updatedCart);
 
 // Practice time
 // !Example 2: Filtering Products by Price
-// const products = [
-//   { name: "Laptop", price: 1200 },
-//   { name: "Phone", price: 800 },
-//   { name: "Tablet", price: 300 },
-//   { name: "Smartwatch", price: 150 },
-// ];
-// // Filter products with a price less than or equal to 500
+const products = [
+  { name: "Laptop", price: 1200 },
+  { name: "Phone", price: 800 },
+  { name: "Tablet", price: 300 },
+  { name: "Smartwatch", price: 150 },
+];
 
-// const filterProducts = products.filter((curElem) => {
-//   //   console.log(curElem.price <= 500);
-//   return curElem.price <= 500;
-// });
-// console.log(filterProducts);
+// ** Filter products with a price less than or equal to 500
 
-// //! Filter unique values
-// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
-// let uniqueValues = numbers.filter((curElem, index, arr) => {
-//   //   console.log(index);
-//   //   console.log(arr.indexOf(curElem));
-//   return arr.indexOf(curElem) === index;
-// });
-// console.log(uniqueValues);
-// console.log([...new Set(numbers)]);
+const filterProducts = products.filter((curElem) => {
+  //   console.log(curElem.price <= 500); // esme boolean values return karega
+  return curElem.price <= 500;
+});
+console.log(filterProducts);
+
+
+// ** Filter unique values
+const numbers8 = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+let uniqueValues = numbers8.filter((curElem, index, arr) => {
+  // console.log(arr) // prints array for each iteration
+  // console.log(arr[index]) // prints the values
+  // console.log(curElem) // prints the values
+
+  // console.log(index);
+  // console.log(arr.indexOf(curElem));
+  return arr.indexOf(curElem) === index;
+});
+console.log(uniqueValues);
+console.log()
+console.log([...new Set(numbers8)]); // 
 
 
 
@@ -337,41 +353,48 @@ console.log(fruits);
 //? How to Sort and Compare an Array
 //? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
 
-// const fruits = ["Banana", "Apple", "Orange", "Mango"];
-// const numbers = [1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
+const fruits6 = ["Banana", "Apple", "Orange", "Mango"];
+console.log(fruits6.sort());
 
-// console.log(numbers);
+const numbers9 = [10,1, 2, 4, 3, 6, 5, 6, 7, 4, 8, 9];
+// console.log(numbers9.sort); // numbers ke saath dhang se kaam nahi karta hai
+
 
 //? compare callback function
 // syntax
-// const sortedNumbers = numbers.sort((a, b) => a - b);
+// const sortedNumbers = numbers9.sort((a, b) => a - b);
 // if(a>b) return 1  => switch the order
-//  if(b>a) return -1  => keep the order
+// if(b>a) return -1  => keep the order
 
-// numbers.sort((a, b) => {
+// const sort1 = numbers9.sort((a, b) => {
+//   if (a>b) return 1;
+//   if (b>a) return -1
+// }) // ascending order
+// console.log(sort1);
+
+// const sort2 = numbers9.sort((a, b) => {
 //   if (a > b) return -1;
 //   if (b > a) return 1;
-// });
-
-// console.log(numbers);
+// });  // descending order
+// console.log(sort2);
 
 //? For ascending order
-// const sortedNumbers = numbers.sort((a, b) => {
-//   if (a > b) {
-//     return 1;
-//   } else if (b > a) {
-//     return -1;
-//   }
-// });
+const sortedNumbers = numbers9.sort((a, b) => {
+  if (a > b) {
+    return 1;
+  } else if (b > a) {
+    return -1;
+  }
+});
 
 //? For descending order
-// const sortedNumbers = numbers.sort((a, b) => {
-//   if (a > b) {
-//     return -1;
-//   } else if (b > a) {
-//     return 1;
-//   }
-// });
+const sortedNumbers1 = numbers9.sort((a, b) => {
+  if (a > b) {
+    return -1;
+  } else if (b > a) {
+    return 1;
+  }
+});
 
 
 
@@ -388,50 +411,47 @@ console.log(fruits);
 // const numbers = [1, 2, 3, 4, 5];
 
 //! Using map to square each number and create a new array
-// const numbers = [1, 2, 3, 4, 5];
+const numbers10 = [1, 2, 3, 4, 5];
 
-// let result = numbers.map((curElem) => curElem * curElem);
-// console.log(result);
+let result7 = numbers10.map((curElem) => curElem * curElem);
+console.log(result7);
 
 //! 1: Using the map method, write a function that takes an array of strings and returns a new array where each string is capitalized.
 // Original array of strings
 const words = ["APPLE", "banana", "cherry", "date"];
 
-// const result = words.map((curElem) => {
-//   return curElem.toLowerCase();
-// });
+const result8 = words.map((curElem) => {
+  return curElem.toLowerCase();
+});
+console.log(result8);
 
-// console.log(result);
 
 //! 2: Using the map method, write a function that takes an array of numbers and returns a new array where each number is squared, but only if it's an even number.
 
 // Original array of numbers
 const numbers = [1, 2, 3, 4, 5];
 
-// const result = numbers
-//   .map((curElem) => {
-//     if (curElem % 2 === 0) {
-//       return curElem * curElem;
-//     }
-//   })
-//   .filter((curElem) => curElem !== undefined);
+const result9 = numbers
+  .map((curElem) => {
+    if (curElem % 2 === 0) {
+      return curElem * curElem;
+    }
+  })
+  .filter((curElem) => curElem !== undefined);
+console.log(result9);
 
-// console.log(result);
-
-// const evenSquare = numbers
-//   .map((curNum) => (curNum % 2 === 0 ? curNum * curNum : undefined))
-//   .filter((curElem) => curElem !== undefined);
-
-// console.log(evenSquare);
 
 //! 3: Using the map method, write a function that takes an array of names and returns a new array where each name is prefixed with "Mr. ".
 
-// const names = ["ram", "vinod", "laxman"];
-// const prefixName = names.map((curName) => `Mr. ${curName}`);
-// console.log(prefixName);
+const names = ["ram", "vinod", "laxman"];
+const prefixName = names.map((curName) => `Mr. ${curName}`);
+console.log(prefixName);
+
+
 
 //? Reduce method
 // The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+
 // syntax
 // array.reduce(function callback(accumulator, currentValue, index, array) {
 //   // Your logic here

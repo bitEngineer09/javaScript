@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../style.css" />
     <style>
       body {
@@ -26,31 +24,56 @@
       <div class="todoListsElem"></div>
     </div>
     <script>
-      let inputElem = document.getElementById("inputField");
-      let clickBtn = document.querySelector(".btn");
-      let todoElem = document.querySelector(".todoListsElem");
-      // let todoFirst = document.getElementById("todoFirst");
+      // let inputElem = document.getElementById("inputField");
+      // let clickBtn = document.querySelector(".btn");
+      // let todoElem = document.querySelector(".todoListsElem");
+      // // let todoFirst = document.getElementById("todoFirst");
 
+      // const addTodo = () => {
+      //   console.log(inputElem.value);
+      //   // todoFirst.textContent = inputElem.value;
+      //   let pElem = document.createElement("p");
+      //   pElem.textContent = inputElem.value;
+      //   console.log(pElem);
+      //   todoElem.append(pElem);
+
+      //   inputElem.value = "";
+      // };
+
+      // clickBtn.addEventListener("click", () => {
+      //   addTodo();
+      // });
+
+      // todoElem.addEventListener("click", (event) => {
+      //   console.log(event.target);
+      //   let currentElem = event.target;
+      //   currentElem.remove();
+      // });
+
+      //------------------------------------
+      let inputValue = document.getElementById("inputField");
+      let ClickButton = document.querySelector('.btn');
+      let toDiv = document.querySelector('.todoListsElem')
+
+      // console.log(inputValue);
+      // console.log(ClickButton);
       const addTodo = () => {
-        console.log(inputElem.value);
-        // todoFirst.textContent = inputElem.value;
-        let pElem = document.createElement("p");
-        pElem.textContent = inputElem.value;
-        console.log(pElem);
-        todoElem.append(pElem);
+        // console.log(inputValue.value);
+        let pEle = document.createElement('p')
+        pEle.textContent = inputValue.value;
+        console.log(pEle);
+        toDiv.append(pEle);
+        inputValue.value = '';
+      }
 
-        inputElem.value = "";
-      };
-
-      clickBtn.addEventListener("click", () => {
+      ClickButton.addEventListener('click', () => {
         addTodo();
-      });
-
-      todoElem.addEventListener("click", (event) => {
-        console.log(event.target);
-        let currentElem = event.target;
-        currentElem.remove();
-      });
+      })
+      // parent me humne event fire kia hai to uske child par bhi kaam kar ra hai
+      toDiv.addEventListener('click', (e) => {
+        console.log(e.target);
+        e.target.remove();
+      })
     </script>
   </body>
 </html>
