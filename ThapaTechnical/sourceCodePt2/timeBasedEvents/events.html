@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Simple DOM Todo App</h1>
+        <input type="text" id="inputField" />
+        <button class="btn">click me</button>
+        <!-- <div class="todoListsElem">
+            <p id="keypressed">Key Pressed: </p>
+            <p id="keycode">Key Code: </p>
+            <p id="charcode">Char codeAt: </p>
+            <p id="eventtype">Event Type: </p>
+        </div> -->
+
+        <div class="input">
+            <p id="inputValue">Input Value: </p>
+            <p id="inputName">Input Name: </p>
+            <p id="inputType">Input Type: </p>
+            <p id="eventType">Event Type: </p>
+        </div>
+    </div>
+</body>
+<script>
+    let inputValue = document.getElementById("inputField");
+    let ClickButton = document.querySelector(".btn")
+    // let ToDoDiv = document.querySelector(".todoListsElem")
+    let inputPara = document.querySelector(".input");
+    
+    // WAY 1
+    // document.querySelector(".btn").onclick = () => {  // w/o arrow function bhi kar sakte hai
+    //     alert('Helllo bhai');
+    // }
+
+
+    // WAY 2
+    // ClickButton.addEventListener("click", () => {
+    //     alert("Hello miss");
+    // })
+
+
+    // WAY 3
+    // function displayMessage() {
+    //     alert("showing this message");
+    // }
+
+    // ClickButton.addEventListener("mouseover", displayMessage);
+                    // OR
+    // ClickButton.addEventListener("mousover", () => {
+    //     displayMessage()
+    // });
+
+
+    // ClickButton.addEventListener("dblclick", (e) => {
+    //     console.log(e); // ye hum event object print kar re hai
+    //     console.log(e.target); // jo target hit hua hai uska HTML dikhata hai. kisko target kiya hai vo pata chalta hai
+    //     document.body.style.backgroundColor = "indigo";
+    // })
+
+
+    // KEYBOARD EVENTS----------------------
+    // mostly two events -> 1. keyup  2. keydown
+
+    // const handleKeyPress = (event) => {
+    //     console.log(event);
+    //     console.log(event.key); // which key pressed
+    //     console.log(event.code); // that key code
+    //     console.log(event.type); // event type
+    //     // document.querySelector('#inputField').style.backgroundColor = "Pink";
+
+    //     document.querySelector("#keypressed").innerHTML = `Key pressed: ${event.key}`;
+    //     document.querySelector("#keycode").innerHTML = `Event code: ${event.code}`;
+    //     document.querySelector("#eventtype").innerHTML = `Event Type: ${event.type}`;
+    //     document.querySelector("#charcode").innerHTML = `Key CharCode: ${event.key.charCodeAt(0)}`;
+    // }
+    // inputValue.addEventListener("keydown", handleKeyPress);
+
+
+    //-----Input Event-----------
+    const addInputInfo = (event) => {
+        // ye console vali lines will print all these data in console
+        console.log(event);
+        console.log(event.target.value);
+        console.log(event.target.name);
+        console.log(event.inputType);
+        console.log(event.type);
+
+        document.querySelector("#inputValue").innerHTML = `Input Value: ${event.target.value}`;
+        document.querySelector("#inputName").innerHTML = `Input Name: ${event.target.name}`;
+        document.querySelector("#inputType").innerHTML = `Input Type: ${event.inputType}`;
+        document.querySelector("#eventType").innerHTML = `Event Type: ${event.type}`;
+    }
+
+    // inputValue.addEventListener("input", addInputInfo); // esme har input pe data real time me show hota rahega
+    
+    // inputValue.addEventListener("change", addInputInfo); // esme jab tak likhke bahar click nahi karenge tab tak data show nahi karega, cuz browser ko ye lagta hai ki user abhi bhi kuch likh ra hai
+</script>
+</html>

@@ -316,7 +316,7 @@ let originalString = "Hello, World! How are you, World?";
 let replacedString = originalString.replace(/world/gi, "vinod");
 console.log(replacedString);
 
-
+// NOTE-> For using reg exp in replaceAll global exp is necessary
 
 
 //* =========================================
@@ -324,7 +324,7 @@ console.log(replacedString);
 //* =========================================
 
 //! Other Useful Methods:
-//? toUpperCase and toLowerCase: 
+//? toUpperCase() and toLowerCase(): 
 // Converts the string to uppercase or lowercase.
 
 const str2 = "JavaScript";
@@ -332,7 +332,7 @@ console.log(str2.toUpperCase()); // Outputs: JAVASCRIPT
 console.log(str2.toLowerCase()); // Outputs: javascript
 
 
-//? trim: 
+//? trim(): 
 // Removes whitespace from both ends of the string.
 
 const str3 = "   Hello, World!   ";
@@ -349,7 +349,7 @@ console.log(trimStr.length);
 const str4 = "apple,orange,banana";
 let strArr1 = str4.split(); // teeno ko as a single element of array return kar dega
 
-// let strArr1 = str4.split("") // seprates each char with commas
+// let strArr1 = str4.split("") // seprates each char with commas, even spaces also
 
 // let strArr1 = str4.split(",") // [ 'apple', 'orange', 'banana' ]
 

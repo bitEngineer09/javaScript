@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+    }
+    h1 {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #main {
+        display: flex;
+        justify-content: center;
+    }
+
+    #addButton{ 
+        margin: 10px;
+        border-radius: 20px;
+        border-width: 2px;
+        width: 90px;
+        height: 33px;
+        font-size: 17px;
+        background-color: rgb(251, 251, 18);
+    }
+
+    #inputField {
+        margin: 10px;
+        border-radius: 20px;
+        border-width: 2px;
+        height: 30px;
+        font-size: 17px;
+    }
+    
+    #todo-lists-elem {
+        display: flex;
+        /* justify-content: center; */
+        /* align-items:center; */
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .main_todo_div {
+        width: 36rem;
+        display: grid;
+        grid-template-columns: 1fr 0.3fr;
+        align-items:center;
+        height: auto;
+    }
+
+</style>
+<body>
+    <h1>To Do Application</h1>
+    <form>
+        <div id="main">
+            <input type="text" id="inputField">
+            <button id="addButton" class="f-div">Click Me</button>
+        </div>
+        <section id="todo-lists-elem"></section>
+    </form>
+    
+</body>
+<script>
+    const inputField = document.querySelector("#inputField");
+    const button = document.querySelector("#addButton");
+    const toDoLists = document.querySelector("#todo-lists-elem");
+    // crate a new Todoelement (eg a div with class 'main_todo_div') with an input value and a delete button.
+    // append the new todo Element in the container (`mainTodoElem`)
+    // store the todo data in array (`localTodoLists`) and update the storage suing `localStorage.setItem`.
+
+    const getToDoDataFromLocalStorage = () => {
+        return JSON.parse(localStorage.getItem("toDoList"));
+    }
+
+    let = localToDoList = getToDoDataFromLocalStorage() || []; 
+    // If we declare it locally inside method then it will reset each time we input the data, so ese global karna pada
+    // future me data nahi mila to kam se kam empty array to return kar do
+    // esse hume pichha data show hoga console me
+
+    const addTodoDynamicElement = (currElement) => {
+        const divElement = document.createElement('div');
+        divElement.classList.add("main_todo_div");
+        divElement.innerHTML = `<li>${currElement}</li> <button class="deleteBtn">Delete</button>`;
+        toDoLists.append(divElement);
+    }
+
+
+    const addToDo = (e) => {
+        e.preventDefault();
+
+        // storing data in array
+        localToDoList.push(inputField.value.trim());
+        // console.log(localToDoList);
+        
+        // removing duplicates
+        localToDoList = [...new Set(localToDoList)] // w/o spread opeartor it gives nested set values, but with set operator it gives individual values
+        console.log(localToDoList);
+
+        // pushing data in localStorage
+        localStorage.setItem("toDoList", JSON.stringify(localToDoList));
+
+        console.log("testing");
+        const divElement = document.createElement('div');
+        divElement.classList.add("main_todo_div");
+        // we can't use innerText cuz hum ek pura HTML element bana re hai
+        divElement.innerHTML = `<li>${inputField.value}</li> <button class="deleteBtn">Delete</button>`;
+        toDoLists.append(divElement);
+    }
+
+    button.addEventListener('click', (e) => {
+        addToDo(e);
+    })
+
+    const showTodoList = () => {
+        console.log(localToDoList);
+        localToDoList.forEach((currElement) => {
+            addTodoDynamicElement(currElement);
+        })
+    }
+
+    // document.querySelector(".deleteBtn").addEventListener('click', (e) => {
+    //     divElement.remove(e.target);
+    // })
+
+</script>
+</html>

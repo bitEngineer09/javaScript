@@ -114,6 +114,8 @@
 
 //? childNodes / children:
 // Get a NodeList or HTMLCollection and filter based on your criteria.
+// childNodes give NodeList
+// children gives HTMLCollection
 
 
 //? Filtering Siblings:

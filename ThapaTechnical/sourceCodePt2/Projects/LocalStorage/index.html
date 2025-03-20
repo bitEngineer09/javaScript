@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        body {
+            /* background: linear-gradient(to right, #f0305d, #242fc9); */
+        }
+        body > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            margin: 30px;
+            border-width: 2px;
+            border-color:rgb(0, 0, 0);
+            border-radius: 40px;
+        }
+
+        #set-data {
+            background-color: rgb(171, 91, 246);
+        }
+        #get-data {
+            background-color: rgb(170, 255, 0);
+        }
+        #remove-data {
+            background-color: rgb(250, 73, 97);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <button id="set-data" class="buttons">Set Data</button>
+        <button id="get-data" class="buttons">Get Data</button>
+        <button id="remove-data" class="buttons">Remove Data</button>
+    </div>
+</body>
+<script>
+    const data =  { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 };
+
+    let setButton = document.querySelector("#set-data");
+    let getButton = document.querySelector("#get-data");
+    let removeButton = document.querySelector("#remove-data");
+
+    // add data to local storage
+    const addDataToLocalStorage = () => {
+        localStorage.setItem("Object Data", JSON.stringify(data));
+    }
+
+    // get data from local storage
+    const getDatFromLocalStorage = () => {
+        const retrievedData = JSON.parse(localStorage.getItem("Object Data"));
+        console.log("Retrieved Data From LocalStorage: ", retrievedData); // without parsing ye hume string type ka data dega
+    }
+
+    // removing data from localStorage
+    const removeData = () => {
+        localStorage.removeItem("Object Data")
+    }
+
+    setButton.addEventListener('click', addDataToLocalStorage);
+    getButton.addEventListener('click', getDatFromLocalStorage);
+    removeButton.addEventListener('dblclick', removeData);
+</script>
+</html>

@@ -17,15 +17,16 @@ localStorage.removeItem("youtubeJsCourse");
 
 //* JSON.stringify: Converts a JavaScript object into a JSON string.
 // Useful when you want to send data to a server or store it in a text file, as JSON is a common data interchange format.
-// const data = { name: "Vinod", age: 30, city: "pune" };
-// const jsonString = JSON.stringify(data);
-// console.log(jsonString);
+const data = { name: "Vinod", age: 30, city: "pune" };
+const jsonString = JSON.stringify(data);
+console.log(jsonString);
 // Output: '{"name":"Vinod","age":30,"city":"pune"}'
+
 
 //* JSON.parse: Converts a JSON string into a JavaScript object.
 // Useful when you receive JSON data from a server or read it from a file, and you want to work with it as a JavaScript object.
 
-const jsonString = '{"name":"Vinod","age":30,"city":"pune"}';
-const parsedData = JSON.parse(jsonString);
+const jsonString1 = '{"name":"Vinod","age":30,"city":"pune"}';
+const parsedData = JSON.parse(jsonString1);
 console.log(parsedData);
 // Output: { name: 'Vinod', age: 30, city: 'pune' }
