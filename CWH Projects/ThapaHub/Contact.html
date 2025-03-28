@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="section-navbar">
+        <div class="container grid-two-cols">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="thapa Hub logo" width="80%" height="auto"/>
+                </a>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li id="nav-items"><a href="index.html">Home</a></li>
+                        <li id="nav-items"><a href="About.html">About</a></li>
+                        <li id="nav-items"><a href="Services.html">Services</a></li>
+                        <li id="nav-items"><a href="Blog.html">Blog</a></li>
+                        <li id="nav-items"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section>
+        <div class="container section-heading">
+            <div class="section-common-heading">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="section-common-sub-heading">
+                <p>
+                    Get in touch with us. We are always here to help you.
+                </p>
+            </div>  <!--yaha tak aage bhi use hoga same cheez-->
+        </div>
+    </section>
+    
+
+    <section class="section-contact">
+        <div class="container-contact container">
+            <div class="contact-details">
+                <form action="https://formspree.io/f/maneobkw" method="POST">
+                    <div class="two-cols mb-3">
+                        <div>
+                            <!-- Label ke for me input ki id likha karo -->
+                            <label for="username">Full Name</label>
+                            <input type="text" name="username" id="username" required autocomplete="off" placeholder="enter your name">
+                        </div>
+    
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required autocomplete="off" placeholder="someone@example.com">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="title of your message"></input>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="form section-hero-button">
+                            send message
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112305.88061422975!2d77.23667366089344!3d28.402391862443714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc15f5a424b1%3A0xe4f50576c850e0f2!2sFaridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1742702383446!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

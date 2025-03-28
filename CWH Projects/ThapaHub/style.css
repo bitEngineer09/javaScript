@@ -1,0 +1,1319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* scroll-snap-type: Y proximity; */
+    background-color: hsl(0, 0%, 94%);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+p, li, a, label {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: regular;
+    color: var(--para-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--para-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Theme */
+/* jo values repeat hoti hai vo hum eske ander dete hai */
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #ebf3fe;
+    --font-color: #424242;
+    --bg-color: #ffffff;
+    --heading-color: #000a19;
+    --para-color: #50434d;
+    --btn-hover-bg-color: #003b99;
+}
+
+
+/* layout */
+.container {
+    max-width: 150rem;
+    margin: 0px auto;
+    padding: 1.3rem 2.4rem;
+}
+
+.grid-two-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--three-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+/* states */
+.section-hero-button:hover {
+    background-color: var(--btn-hover-bg-color);
+}
+
+
+
+/* navbar-section */
+.section-navbar .container {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    align-items: center;
+    justify-items: center;
+}
+
+.section-navbar ul {
+    display: flex;
+    gap: 3.3rem;
+    /* text-transform: capitalize; */
+
+    /* & is used for nesting */
+    & li a {
+        text-transform: uppercase;
+        color: var(--heading-color);
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+        
+        /* &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            border: 0.2rem var(--main-color);
+        } */
+    }
+}
+
+.navbar-logo {
+    justify-self: start;
+}
+.navbar {
+    justify-self: end;
+}
+
+/* End navbar section */
+
+
+/* start Hero section */
+main .container {
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+    gap: 1rem;
+}
+
+main {
+    background-image: linear-gradient(90deg, rgba(0, 98, 255, 0.6), var(--bg-color));
+    position: relative;
+}
+
+.main-hero-image img{
+    /* ye karne se image resposive ho jaati hai */
+    width: 100%;
+    height: auto;
+
+    /* to rotate this image */
+    transform: scaleX(-1);
+}
+
+.section-hero-first-para {
+    text-align: start;
+    display: inline-block;
+    color: var(--heading-color);
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin: 0 0 2rem 0;
+}
+
+.section-hero-heading {
+    display: inline-block;
+    color: var(--btn-hover-bg-color);
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    word-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
+}
+
+.section-hero-second-para {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    margin: 3rem 0;
+    line-height: 1.9rem;
+    text-align: start;
+}
+
+.section-hero-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 1.2rem 3.2rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    
+
+    & a {
+        color: var(--bg-color);
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.13rem;
+    }
+}
+
+/* Shape divider */
+.custom-shape-divider-bottom-1742647139 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1742647139 svg {
+    position: relative;
+    display: block;
+    width: calc(182% + 1.3px);
+    height: 9.8rem;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1742647139 .shape-fill {
+    fill: #FFFFFF;
+}
+/* End Hero Section */
+
+
+/* start about section */
+.section-common-heading h2{
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.section-common-sub-heading p {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.about-div {
+    text-align: center;
+
+    & img {
+        padding: 2.4rem;
+        background-color: var(--supporting-color);
+        width: 15rem;
+        height: auto;
+        border-radius: 50%;
+        transition: all 0.5s linear;
+
+        &:hover {
+            rotate: 360deg;
+        }
+    }
+}
+
+.container .about-container {
+    margin-top: 1rem;
+}
+
+.div-1 {
+    padding: 2rem;
+}
+
+.div-1 h2 {
+    text-align: center;
+    margin: 1.8rem;
+}
+
+.div-1 p {
+    text-align: center;
+    font-weight: 500;
+    line-height: 2.1rem;
+}
+
+.section-course-heading {
+    margin-top: 9rem;
+    margin-bottom: 5rem;
+}
+
+.grid--three-cols {
+    margin-top: 10rem;
+}
+/* end about section */
+
+
+/* Start Courses Section */
+
+.grid-four-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3.6rem;
+    row-gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.courses-div:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.courses-div {
+    padding: 10rem 7rem ;
+}
+
+.courses-div h2 {
+    margin: 1.7rem 0rem ;
+}
+
+.courses-div p {
+    line-height: 1.9rem;
+    word-spacing: 0.1rem;
+}
+
+.fa-brands {
+    font-size: 5rem;
+    color: #F0DB4F;
+}
+
+.fa-html5 {
+    font-size: 5rem;
+    color: orangered;
+}
+
+.fa-python {
+    font-size: 5rem;
+    color: #0062ff;
+}
+
+.fa-css3-alt {
+    font-size: 5rem;
+    color: orangered;
+}
+
+.fa-java {
+    font-size: 5rem;
+    color: red;
+}
+
+.fa-magento {
+    font-size: 5rem;
+    color: magenta;
+}
+
+.fa-hashtag {
+    font-size: 5rem;
+    color: blueviolet;
+}
+
+/* Courses section END */
+
+
+/* More-Info section start */
+.info-icon {
+    aspect-ratio: 1;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: #cedffa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-info-divs {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+.more-info-divs h2 {
+    margin: 1rem 0 1.6rem 0;
+}
+
+.more-info-divs p {
+    text-align: end;
+    line-height: 1.9rem;
+    word-spacing: 0.1rem;
+}
+
+.more-info-image {
+    display: flex;
+    justify-content: center;
+}
+.more-info-image img {
+    width: 30rem;
+    height: auto;
+    padding: 3rem 1rem 3rem 1rem;
+}
+
+
+.more-info-main-div {
+    column-gap: 1rem;
+}
+
+.second {
+    align-items: start;
+    & p {
+        text-align: start;
+    }
+    margin: 2.6rem 0 2rem 0;
+}
+
+.first {
+    margin: 2.6rem 0 2rem 0;
+    padding: 0 3.5rem 0 5rem;
+}
+
+/* <!-- More-Info-section-end --> */
+
+
+/* Start Contact Home Section */
+
+.contact-home {
+    gap: 10px;
+    box-shadow: rgba(109, 109, 122, 0.2) 0px 7px 29px 0px;
+    border-radius: 1rem;
+    padding: 5rem;
+    /* ye relative karne se ab use neeche vale footer ke uper neeche khiska sakte hai */
+    position: relative;
+    bottom: -15rem;
+    /* background coolor dene se vo ubhar jaaega uper */
+    background-color: hsl(0, 0%, 94%);
+}
+
+.contact-image img {
+    /* padding-top: 3rem; */
+    width: 100%;
+    height: auto;
+}
+
+.contact-info {
+    padding: 3.4rem;
+    /* padding-right: 2rem; */
+}
+
+.contact-info h2 {
+    font-size: 4rem;
+}
+
+.contact-info p {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: var(--para-color)
+}
+
+.contact-button {
+    margin-top: 10rem;
+    
+}
+.contact-button button {
+    background-color: var(--main-color);
+    padding: 1.2rem 3.2rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    
+    & a {
+        color: var(--bg-color);
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.13rem;
+    }
+}
+
+.fa-arrow-right {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #0062ff;
+    font-weight: 700;
+}
+ /* End Contact Home Section  */
+
+
+
+  /* Start Footer Section  */
+footer {
+    background-color: #000000;
+    padding-top: 15rem;
+}
+
+.footer-container {
+    padding: 8rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: end;
+    gap: 1rem;
+}
+
+
+.ad {
+    & h2,p {
+        color: #ffffff;
+        text-align: start;
+    }
+}
+
+.ad .ad-icons {
+    display: flex;
+    font-size: 2rem;
+    gap: 1.8rem;
+
+    
+}
+
+.ft-icons {
+    color: #3581eb;
+    font-size: 1.9rem;
+    background-color: #eaf1fb;
+    border-radius: 50%;
+    padding: 1rem;
+    height: auto;
+
+    transition: all 0.3s linear;
+    &:hover {
+        color: var(--bg-color);
+        background-color: var(--btn-hover-bg-color);
+        rotate: 360deg; /* rotate karvane ke liye timig seni padegi*/
+    }
+}
+
+.ad h2 {
+    padding: 1rem 0rem 1rem 0rem;
+    color: #ffffff;
+}
+
+.ad p {
+    color: var(--para-color);
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+}
+
+.courses-list h2 {
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+
+.links h2{
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+}
+
+.footer-container li{
+    color: #ffffff;
+    font-weight: 200;
+    line-height: 2rem;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ft-bt {
+    color: #ffffff;
+    font-weight: 600;
+    &:hover {
+        background-color: #003b99;
+    }
+}
+/* End Footer Section  */
+
+
+/* Start Cards Section */
+
+.cards_block {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: scale 0.3s linear;
+    &:hover {
+        scale: 1.2;
+    }
+}
+
+.cards_block .cards_image img{
+    width: 100%;
+    height: auto;
+}
+
+.cards_content .cards_date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    color: var(--para-color);
+    font-weight: 600;
+    font-size: 1.9rem;
+    & .fa-arrow-right {
+        color: var(--font-color);
+    }
+}
+
+.cards_content {
+    padding: 2rem;
+
+    & h2 {
+        font-size: 1.4rem;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.6rem;
+    padding: 6rem 1.5rem 15rem 1.5rem;
+}
+
+
+.blog-footer {
+    padding-top: 1rem;
+}
+
+/* Start Contact Section */
+.section-contact .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-hero-button {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+form button {
+    color: var(--bg-color);
+    &:hover{
+        background-color: #003b99;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.two-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+}
+
+.mb-3 {
+    margin-bottom: 3.2rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+}
+
+.container-contact {
+    margin-top: 8rem;
+    gap: 4rem;
+}
+
+
+
+::placeholder {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+}
+
+iframe {
+    width: 100%;
+    height: 52rem;
+}
+
+.section-heading {
+    margin-top: 6rem;
+}
+
+.section-navbar {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* End Contact Section */
+
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 2rem;
+}
+
+::-webkit-scrollbar-track {
+    /* vo ji track pe scroll hota hai uska color */
+    background: var(--supporting-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 4rem;
+}
+
+::-webkit-scrollbar--thumb:hover {
+    background: var(--heading-color);
+}
+/* End ScrollBar section */
+
+
+
+
+/* Media queries */
+
+/* @media (max-width: 1386px) {
+    html {
+        font-size: 56.25%; 
+    }
+} */
+
+@media (width <= 1380px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .main-hero-image img {
+        width: 90%;
+    }
+
+    .custom-shape-divider-bottom-1742647139 svg {
+        height: 5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .grid-two-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid--three-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid-four-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-logo {
+        text-align: center;
+        justify-self: center;
+    }
+
+    .navbar {
+        justify-self: center;
+        & li {
+            font-size: 1.9rem;
+        }
+    }
+    .section-navbar .container {
+        gap: 0.8rem;
+    }
+
+
+    main .container {
+        padding-top: 2rem;
+        background-image: linear-gradient(to top, rgba(0, 98, 255, 0.6), var(--bg-color));
+    }
+
+    .section-hero-content {
+        order: 1;
+        text-align: center;
+        & h1 {
+            font-size: 3rem;
+        }
+        & .section-hero-second-para {
+            text-align: center;
+        }
+        justify-items: center;
+    }
+
+
+    /* End More-Info Section */
+    .main-hero-image  img{
+        order: 1;
+        width: 100%;
+    }
+
+    .section-hero-first-para {
+        padding-top: 1rem;
+    }
+
+    .section-heading {
+        margin-top: 3rem;
+    }
+    
+    .about-container {
+        margin-top: 1rem;
+        gap: 2rem;
+        
+    }
+    .div-1 {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    /* End More-Info Section*/
+
+
+    /* Start Course Info */
+    .section-course-heading {
+        margin: 2rem 0;
+    }
+
+    .courses-div {
+        padding: 2rem 4rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .courses-container {
+        gap: 4rem;
+    }
+    /* End Course Info */
+
+
+
+    /* End More Info */
+    .more-info-main-div {
+        margin-top: 2rem;
+    }
+
+    .more-info-divs  {
+        align-items: start;
+        & p{ 
+            text-align: start;
+        }
+    }
+    .two{
+        order: 1;
+    }
+    .one {
+        order: 2;
+    }
+    .three {
+        order: 3;
+    }
+    /* End More Info */
+
+
+
+    /* Start Contact-home section */
+    .contact-home {
+        top: 0;
+    }
+
+    .contact-info {
+        order: 2;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        & h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+    .contact-button button {
+        /* background-color: #000000; */
+        
+    }
+    .contact-image img{
+        order: 1;
+    }
+    /* End Contact-home section */
+
+    /* Start Footer Section */
+    footer {
+        padding-top: 2rem;
+    }
+    .footer-container {
+        padding: 2rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .courses-list {
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .grid-two-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid--three-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid-four-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-logo {
+        text-align: center;
+        justify-self: center;
+    }
+
+    .navbar {
+        justify-self: center;
+        & ul {
+            gap: 1rem;
+        }
+        & a {
+            font-size: 1.3rem;
+        }
+    }
+    .section-navbar .container {
+        gap: 0.8rem;
+    }
+
+
+    main .container {
+        padding-top: 2rem;
+        background-image: linear-gradient(to top, rgba(0, 98, 255, 0.6), var(--bg-color));
+    }
+
+    .section-hero-content {
+        order: 1;
+        text-align: center;
+        & h1 {
+            font-size: 2.8rem;
+            line-height: 2.9rem;
+        }
+        & .section-hero-second-para {
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        justify-items: center;
+    }
+
+    .section-hero-button {
+        padding: 1rem;
+        & a {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    /* End More-Info Section */
+    .main-hero-image  img{
+        order: 1;
+        width: 100%;
+    }
+
+    .section-hero-first-para {
+        padding-top: 1rem;
+    }
+
+    .section-heading {
+        margin-top: 3rem;
+    }
+    .section-common-heading h2{
+        font-size: 2rem;
+    }
+    .section-common-sub-heading p {
+        font-size: 1.3rem;
+    }
+    .about-container {
+        margin-top: 1rem;
+        gap: 2rem;
+        
+    }
+    .div-1 {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    /* End More-Info Section*/
+
+
+    /* Start Course Info */
+    .section-course-heading {
+        margin: 2rem 0;
+    }
+
+    .courses-div {
+        padding: 2rem 4rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .courses-container {
+        gap: 4rem;
+    }
+    /* End Course Info */
+
+
+
+    /* End More Info */
+    .more-info-main-div {
+        margin-top: 2rem;
+    }
+
+    .more-info-divs  {
+        padding: 1rem 2rem;
+        align-items: start;
+        & p{ 
+            text-align: start;
+        }
+    }
+    .two{
+        order: 1;
+    }
+    .one {
+        order: 2;
+    }
+    .three {
+        order: 3;
+    }
+    /* End More Info */
+
+
+
+    /* Start Contact-home section */
+    .contact-home {
+        top: 0;
+        padding: 4.5rem 2.2rem
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+        order: 2;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        & h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+    .contact-button button {
+        padding: 1rem;
+        & a {
+            font-size: 1.3rem;
+        }
+        
+    }
+    .contact-image img{
+        order: 1;
+    }
+    .fa-arrow-right {
+        font-size: 1rem;
+    }
+    /* End Contact-home section */
+
+
+
+    /* Start Footer Section */
+    footer {
+        padding: 2rem;
+    }
+    .footer-container {
+        padding: 2rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 2.5rem;
+        & h2, p {
+            text-align: center;
+        }
+    }
+    .courses-list {
+        text-align: center;
+    }
+
+    .ad-icons {
+        gap: 2rem;
+        justify-content: space-around;
+        
+    }
+
+
+    /* Start Blog Section */
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.7rem;
+        gap: 2.5rem;
+    }
+    /* End Blog Section */
+
+
+    /* Start Contact Page */
+    .container-contact {
+        margin-top: 1.5rem;
+    }
+
+    .section-contact .container{
+        grid-template-columns: 1fr;
+    }
+
+    .two-cols {
+        grid-template-columns: 1fr;
+        gap: 2.6rem;
+    }
+
+    .section-hero-button {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    input ,textarea{
+        padding: 0.8rem;
+    }
+    ::placeholder {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .grid-two-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid--three-cols {
+        grid-template-columns: 1fr;
+    }
+    .grid-four-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-logo {
+        text-align: center;
+        justify-self: center;
+    }
+
+    .navbar {
+        justify-self: center;
+        & ul {
+            gap: 1rem;
+        }
+        & a {
+            font-size: 1.3rem;
+        }
+    }
+    .section-navbar .container {
+        gap: 0.8rem;
+    }
+
+
+    main .container {
+        padding-top: 2rem;
+        background-image: linear-gradient(to top, rgba(0, 98, 255, 0.6), var(--bg-color));
+    }
+
+    .section-hero-content {
+        order: 1;
+        text-align: center;
+        & h1 {
+            font-size: 2.8rem;
+            line-height: 2.9rem;
+        }
+        & .section-hero-second-para {
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        justify-items: center;
+    }
+
+    .section-hero-button {
+        padding: 1rem;
+        & a {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    /* End More-Info Section */
+    .main-hero-image  img{
+        order: 1;
+        width: 100%;
+    }
+
+    .section-hero-first-para {
+        padding-top: 1rem;
+    }
+
+    .section-heading {
+        margin-top: 3rem;
+    }
+    .section-common-heading h2{
+        font-size: 2rem;
+    }
+    .section-common-sub-heading p {
+        font-size: 1.3rem;
+    }
+    .about-container {
+        margin-top: 1rem;
+        gap: 2rem;
+        
+    }
+    .div-1 {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    /* End More-Info Section*/
+
+
+    /* Start Course Info */
+    .section-course-heading {
+        margin: 2rem 0;
+    }
+
+    .courses-div {
+        padding: 2rem 4rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .courses-container {
+        gap: 4rem;
+    }
+    /* End Course Info */
+
+
+
+    /* End More Info */
+    .more-info-main-div {
+        margin-top: 2rem;
+    }
+
+    .more-info-divs  {
+        padding: 1rem 2rem;
+        align-items: start;
+        & p{ 
+            text-align: start;
+        }
+    }
+    .two{
+        order: 1;
+    }
+    .one {
+        order: 2;
+    }
+    .three {
+        order: 3;
+    }
+    /* End More Info */
+
+
+
+    /* Start Contact-home section */
+    .contact-home {
+        top: 0;
+        padding: 4.5rem 2.2rem
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+        order: 2;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        & h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+    .contact-button button {
+        padding: 1rem;
+        & a {
+            font-size: 1.3rem;
+        }
+        
+    }
+    .contact-image img{
+        order: 1;
+    }
+    .fa-arrow-right {
+        font-size: 1rem;
+    }
+    /* End Contact-home section */
+
+
+
+    /* Start Footer Section */
+    footer {
+        padding: 2rem;
+    }
+    .footer-container {
+        padding: 2rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 2.5rem;
+        & h2, p {
+            text-align: center;
+        }
+    }
+    .courses-list {
+        text-align: center;
+    }
+
+    .ad-icons {
+        gap: 2rem;
+        justify-content: space-around;
+        
+    }
+
+
+    /* Start Blog Section */
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.7rem;
+        gap: 2.5rem;
+    }
+    /* End Blog Section */
+
+
+    /* Start Contact Page */
+    .container-contact {
+        margin-top: 1.5rem;
+    }
+
+    .section-contact .container{
+        grid-template-columns: 1fr;
+    }
+
+    .two-cols {
+        grid-template-columns: 1fr;
+        gap: 2.6rem;
+    }
+
+    .section-hero-button {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    input ,textarea{
+        padding: 0.8rem;
+    }
+    ::placeholder {
+        font-size: 1.4rem;
+    }
+}
+
+

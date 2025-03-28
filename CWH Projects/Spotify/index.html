@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Start NavBar -->
+    <nav>
+        <div class="navbar">
+            <div class="spotify-logo">
+                <img src="images/logo.png" alt="logo">
+                <span>Spotify</span>
+            </div>
+
+            <div class="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+
+
+
+    <!-- Start Main -->
+    <main>
+        <div class="container">
+                <h1>Best Of NCS - No Copyright Sounds</h1>
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span class="songDuration">05:45 <i id="1" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i id="2" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i id="3" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i id="4" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i id="5" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i id="6" class="fa-solid fa-play songItemPlay"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songItems" id="7">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <span class="songName"></span>
+                        <span>05:45 <i  class="fa-solid fa-play songItemPlay" id="7"></i></span>
+                        
+                    </li>
+            </div>
+
+            <div class="songBanner"></div>
+        </div>
+    </main>
+    <!-- End Main -->
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100" >
+        <!-- value = 0 means, its initial value is 0 -->
+        <div class="icons">
+            <i class="fa-solid previous fa-backward"></i>
+            <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid next fa-forward"></i>
+        </div>
+
+        <div class="song-info">
+            <div>
+                <img src="images/playing.gif" alt="" id="playing-gif">
+            </div>
+            <div>
+                <span id="bottomSongName"> </span>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <script src="index.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>

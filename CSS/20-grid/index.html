@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+     <style>
+      .grid-container {
+        border: 2px solid black;
+        display: grid;
+        grid-template-rows: repeat(2, 250px);
+        grid-template-columns:  300px repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        background-color: black;
+        row-gap: 40px;
+        column-gap: 40px;
+        /* grid-template-columns: 1fr minmax(150px, 1fr) repeat(1, 1fr);
+        grid-template-columns */
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      }
+
+      .item {
+        border: 2px solid black;
+        background-color: aqua;
+      }
+
+      /* . */
+     </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2 World best css coure it is ever ,my brother</div>
+      <div class="item item-3--child">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-5</div>
+    </div>
+  </body>
+</html>
